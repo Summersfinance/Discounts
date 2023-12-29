@@ -37,7 +37,7 @@
             padding: 20px;
             margin: 20px auto;
             background-color: white;
-            color: purple;
+            color: dark blue;
             text-decoration: none;
             text-align: center;
             font-size: 30px;
@@ -90,33 +90,32 @@
             'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1067012098069457');
         fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1067012098069457&ev=PageView&noscript=1"
-        /></noscript>
+    // Add the JSON data as an event
+        var eventData = {
+            "data": [
+                {
+                    "event_name": "Purchase",
+                    "event_time": 1703872822,
+                    "action_source": "website",
+                    "user_data": {
+                        "em": [
+                            "7b17fb0bd173f625b58636fb796407c22b3d16fc78302d79f0fd30c2fc2fc068"
+                        ],
+                        "ph": [
+                            null
+                        ]
+                    },
+                    "custom_data": {
+                        "currency": "EUR",
+                        "value": 1
+                    }
+                }
+            ]
+        };
+
+
     <!-- End Meta Pixel Code -->
 
 </body>
 
 </html>
-{
-    "data": [
-        {
-            "event_name": "Purchase",
-            "event_time": 1703872822,
-            "action_source": "website",
-            "user_data": {
-                "em": [
-                    "7b17fb0bd173f625b58636fb796407c22b3d16fc78302d79f0fd30c2fc2fc068"
-                ],
-                "ph": [
-                    null
-                ]
-            },
-            "custom_data": {
-                "currency": "EUR",
-                "value": 1
-            }
-        }
-    ]
-}
